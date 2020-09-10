@@ -16,10 +16,15 @@
             return items[Math.floor(Math.random()*items.length)];
         }
 
-        let items = ["Rock", "Paper", "Scissors"];
+        let items = ["Rock", "Paper", "Scissors"]
+
+        let input = prompt("Please enter Rock, Paper, or Scissors");
+        let playerSelection = input.toLowerCase();
+
+        
 
         function playRound(playerSelection, computerSelection) {
-
+            
         }
 
         const computerSelection = computerPlay()
