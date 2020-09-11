@@ -13,27 +13,38 @@
 
     <script>
         function computerPlay(items) {
-            return items[Math.floor(Math.random()*items.length)];
+            return items[Math.floor(Math.random()*items.length)];  //Will choose a random selection from items array
         }
 
-        let items = ["Rock", "Paper", "Scissors"]
+        let items = ["rock", "paper", "scissors"] 
 
-        let input = prompt("Please enter Rock, Paper, or Scissors");
-        let playerSelection = input.toLowerCase();
+        let input = prompt("Please enter Rock, Paper, or Scissors"); //prompt user for their input
+        let playerSelection = input.toLowerCase(); //takes input in any case and turns it all lowercase
 
         if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors")) {
             console.log(playerSelection);
         } else {
-            alert("Rock, Paper, or Scissors only!");
+            alert("Rock, Paper, or Scissors only!"); //alerts user to input rock, paper, or scissors, if they had entered another value previously
         }
         
 
         function playRound(playerSelection, computerSelection) {
-            
+            if ((playerSelection === "rock" && computerSelection === "scissors") || 
+               (playerSelection === "scissors" && computerSelection === "paper") ||
+               (playerSelection === "paper" && computerSelection === "rock")) {
+                   return = "Great Job! You won!"
+            } else if ((playerSelection === "rock" && computerSelection === "paper") ||
+                       (playerSelection === "scissors" && computerSelection === "rock") ||
+                       (playerSelection === "paper" && computerSelection === "scissors")) {
+                           return = "Oh dear, you lose!"
+            } else if (playerSelection === computerSelection) {
+                return = "It's a Tie!"
+            }
+
         }
 
-        const computerSelection = computerPlay()
-        const playerSelection = 
+        const computerSelection = computerPlay(); 
+        const playerSelection = "rock";
 
 
     </script>
