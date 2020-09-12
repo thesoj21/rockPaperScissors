@@ -20,7 +20,7 @@
         }
 
         console.log(computerPlay());
-        
+
         const computerSelection = computerPlay();
 
         let input = prompt("Please enter Rock, Paper, or Scissors"); //prompt user for their input
@@ -30,26 +30,38 @@
             console.log(playerSelection);
         } else {
             alert("Rock, Paper, or Scissors only!"); //alerts user to input rock, paper, or scissors, if they had entered another value previously and logs it
-        }
+        }                   //this whole thing seems to be an issue rn, where it will alert user if wrong value is entered but then prompt box will disapear and user won't be able to enter value
         
 
         function playRound(playerSelection, computerSelection) {  //play a round of RPS with the following outcomes
-            if ((playerSelection === "rock" && computerSelection === "scissors") || 
-               (playerSelection === "scissors" && computerSelection === "paper") ||
-               (playerSelection === "paper" && computerSelection === "rock")) {
-                   return "Wow, you beat a computer."
-            } else if ((playerSelection === "rock" && computerSelection === "paper") ||
-                       (playerSelection === "scissors" && computerSelection === "rock") ||
-                       (playerSelection === "paper" && computerSelection === "scissors")) {
-                           return "Loser!"
-            } else if (playerSelection === computerSelection) {
+            if (playerSelection === "rock" && computerSelection === "scissors") {
+                return "Yay! Rock smashes scissors!"
+            } 
+            else if (playerSelection === "scissors" && computerSelection === "paper") {
+                return "Hooray! Scissors cuts paper!"
+            }
+            else if (playerSelection === "paper" && computerSelection === "rock") {
+                   return "Nice! Paper covers rock!"
+            } 
+            else if (playerSelection === "rock" && computerSelection === "paper") {
+                return "You lost! Paper covers rock."
+            }
+            else if (playerSelection === "scissors" && computerSelection === "rock") {
+                return "You lose, rock smashes scissors."
+            }
+            else if (playerSelection === "paper" && computerSelection === "scissors") {
+                return "You lost, scissors cuts paper."
+            } 
+            else if (playerSelection === computerSelection) {
                 return "Tie"
             }
         }
 
         console.log(playRound(playerSelection, computerSelection));
 
-
+        function game() {
+            playRound()
+        }
     </script>
 </body>
 
