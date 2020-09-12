@@ -19,6 +19,7 @@
             return items[Math.floor(Math.random()*items.length)];  //Will choose a random selection from items array
         }
 
+        
         const computerSelection = computerPlay();
 
         let input = prompt("Please enter Rock, Paper, or Scissors"); //prompt user for their input
@@ -27,9 +28,10 @@
         if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
             console.log(playerSelection);
         } else {
-            alert("Rock, Paper, or Scissors only!"); //alerts user to input rock, paper, or scissors, if they had entered another value previously and logs it
-        }                   //this whole thing seems to be an issue rn, where it will alert user if wrong value is entered but then prompt box will disapear and user won't be able to enter value
+            prompt("Rock, Paper, or Scissors only!"); //alerts user to input rock, paper, or scissors, if they had entered another value previously and logs it
+        }                   //fixed this to prompt instead of alert so you have to enter a value, but now the value is undefined
         
+        console.log(computerSelection);
 
         function playRound(playerSelection, computerSelection) {  //play a round of RPS with the following outcomes
             if (playerSelection === "rock" && computerSelection === "scissors") {
