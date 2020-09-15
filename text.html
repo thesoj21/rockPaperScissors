@@ -22,16 +22,14 @@
         
         const computerSelection = computerPlay();
 
-        let input = prompt("Please enter Rock, Paper, or Scissors"); //prompt user for their input
+        let input = window.prompt("Please enter Rock, Paper, or Scissors"); //prompt user for their input
         let playerSelection = input.toLowerCase(); //takes input in any case and turns it all lowercase
 
-       // if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
-            console.log(playerSelection);
-        //} else {
-        //    prompt("Rock, Paper, or Scissors only!"); //alerts user to input rock, paper, or scissors, if they had entered another value previously and logs it
-       // }                   //fixed this to prompt instead of alert so you have to enter a value, but now the value is undefined
+       
+        console.log(playerSelection);
         
-        console.log(computerSelection);
+        
+        console.log("The computer chose: " + computerSelection);
 
         function playRound(playerSelection, computerSelection) {  //play a round of RPS with the following outcomes
             if (playerSelection === "rock" && computerSelection === "scissors") {
