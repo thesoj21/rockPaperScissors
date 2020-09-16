@@ -36,31 +36,31 @@
 
         function playRound(playerSelection, computerSelection) {  //play a round of RPS with the following outcomes
             if (playerSelection === "rock" && computerSelection === "scissors") {
-                return "Yay! Rock smashes scissors!";
                 playerScore++;
+                return "Yay! Rock smashes scissors!";
             } 
             else if (playerSelection === "scissors" && computerSelection === "paper") {
-                return "Hooray! Scissors cuts paper!";
                 playerScore++;
+                return "Hooray! Scissors cuts paper!";
             }
             else if (playerSelection === "paper" && computerSelection === "rock") {
-                return "Nice! Paper covers rock!";
                 playerScore++;
+                return "Nice! Paper covers rock!";
             } 
             else if (playerSelection === "rock" && computerSelection === "paper") {
-                return "You lost! Paper covers rock.";
                 computerScore++;
+                return "You lost! Paper covers rock.";
             }
             else if (playerSelection === "scissors" && computerSelection === "rock") {
-                return "You lose, rock smashes scissors.";
                 computerScore++;
+                return "You lose, rock smashes scissors.";
             }
             else if (playerSelection === "paper" && computerSelection === "scissors") {
-                return "You lost, scissors cuts paper.";
                 computerScore++;
+                return "You lost, scissors cuts paper.";
             } 
             else if (playerSelection === computerSelection) {
-                return "Tie"
+                return "Tie";
             }
 
         }
