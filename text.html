@@ -25,8 +25,8 @@
         
         const computerSelection = computerPlay();
 
-        let input = window.prompt("Please enter Rock, Paper, or Scissors"); //prompt user for their input
-        let playerSelection = input.toLowerCase(); //takes input in any case and turns it all lowercase
+       // let input = window.prompt("Please enter Rock, Paper, or Scissors"); //prompt user for their input
+       // let playerSelection = input.toLowerCase(); //takes input in any case and turns it all lowercase
 
        
         console.log(playerSelection);
@@ -62,26 +62,31 @@
             else if (playerSelection === computerSelection) {
                 return "Tie";
             }
-
         }
 
-        console.log(playRound(playerSelection, computerSelection));
+        //console.log(playRound(playerSelection, computerSelection));
 
-        function game() {
-            playRound();
-            playRound();
-            playRound();
-            playRound();
-            playRound();
+        function endGame() {
             if (computerScore > playerScore) {
                 console.log("Too bad, the computer won.")
             } else {
-                console.log("Way to go! You won!")    
-            }
+                console.log("Way to go! You won!")
         }
 
-        game();
+        function game() {
+           for (i = 0; i < 5; i++) {
+                let playerSelection = window.prompt("Please enter Rock, Paper, or Scissors").toLowerCase;
+                console.log(playRound(playerSelection, computerSelection))
+                playRound(playerSelection, computerSelection);
+                endGame();
+           }
+        }
         
+        game();
+
+
+        
+
     </script>
 </body>
 
