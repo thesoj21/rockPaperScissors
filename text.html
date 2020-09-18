@@ -67,7 +67,7 @@
         //console.log(playRound(playerSelection, computerSelection));
 
         function results() {
-            console.log("Player Score: " + playerScore + "Computer Score: " + computerScore);
+            console.log("Player Score: " + playerScore + " " + "Computer Score: " + computerScore);
             if (computerScore > playerScore) {
                 console.log("Too bad, the computer won.")
             } else {
@@ -76,18 +76,15 @@
         }    
 
         function game() {
-           //for (i = 0; i < 5; i++) {
+           for (let i = 0; i < 5; i++) {
             const playerSelection = window.prompt("Please enter Rock, Paper, or Scissors").toLowerCase;
             const computerSelection = computerPlay();
+            playRound(playerSelection, computerSelection);
             console.log(playRound(playerSelection, computerSelection));
-                //playRound(playerSelection, computerSelection);
-               // endGame();
            }
         }
         
-        for (var round = 0; round < 5; round++) {
-            game();
-        }
+        game();
 
         results();
 
