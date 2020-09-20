@@ -21,18 +21,11 @@
         function computerPlay() {
             return items[Math.floor(Math.random()*items.length)];  //Will choose a random selection from items array
         }
-
-        
+  
         const computerSelection = computerPlay();
 
         let input = window.prompt("Please enter Rock, Paper, or Scissors"); //prompt user for their input
         let playerSelection = input.toLowerCase(); //takes input in any case and turns it all lowercase
-
-       
-       // console.log(playerSelection);
-        
-        
-        //console.log("The computer chose: " + computerSelection);
 
         //play a round of RPS with the following outcomes. Add a point to the winner.
         function playRound(playerSelection, computerSelection) {  
@@ -76,10 +69,12 @@
 
         function game() {
            for (let i = 0; i < 5; i++) {
-            const playerSelection = window.prompt("Please enter Rock, Paper, or Scissors").toLowerCase;
+            const playerSelection = window.prompt("Please enter Rock, Paper, or Scissors").toLowerCase();
             const computerSelection = computerPlay();
             playRound(playerSelection, computerSelection);
-            console.log(playRound(playerSelection, computerSelection));
+            //console.log(playRound(playerSelection, computerSelection));
+            console.log("You chose: " + playerSelection);
+            console.log("The computer chose: " + computerSelection);
            }
         }
        
